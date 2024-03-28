@@ -1,44 +1,23 @@
-<!-- res/layout/breakfasts_category.xml -->
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp">
-    <ImageView
-        android:id="@+id/imageBreakfast"
-        android:layout_width="203dp"
-        android:layout_height="206dp"
-        android:layout_marginBottom="16dp"
-        android:src="@drawable/dosabatter"
-        app:layout_constraintBottom_toTopOf="@+id/textBreakfastName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-    <TextView
-        android:id="@+id/textBreakfastName"
-        android:layout_width="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <!-- RecyclerView for breakfast items -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewBreakfasts"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:layout_marginBottom="12dp"
-        android:text="Breakfast Name"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/btnAddBreakfast"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageBreakfast" />
+        android:layout_weight="1" />
+
+    <!-- Submit button -->
     <Button
-        android:id="@+id/btnAddBreakfast"
-        android:layout_width="wrap_content"
+        android:id="@+id/submitBtn"
+        android:background="#2C511E"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="381dp"
-        android:text="Add"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textBreakfastName" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:text="Submit" />
+
+</LinearLayout>
