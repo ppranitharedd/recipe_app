@@ -5,11 +5,19 @@
     android:orientation="vertical"
     android:padding="8dp">
 
-    <!-- RecyclerView for dinner items -->
+    <!-- RecyclerView for dessert items -->
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewDinner"
+        android:id="@+id/recyclerViewDesserts"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1" />
+
+    <Button
+        android:id="@+id/submitBtn"
+        android:background="#2C511E"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit" />
+    <!-- RecyclerView for another list of items -->
 
 </LinearLayout>
