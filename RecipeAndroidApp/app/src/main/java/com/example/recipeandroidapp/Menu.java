@@ -47,7 +47,10 @@ public class Menu extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 // Implement your logic for Dinner button click
-               
+                Intent intent = new Intent(Menu.this,DinnerCategory.class);
+                startActivity(intent);
+
+
             }
         });
     }
