@@ -2,11 +2,8 @@ package com.example.recipeandroidapp;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -21,7 +18,7 @@ public class DessertsCategory extends AppCompatActivity {
     private RecyclerView recyclerView;
     private DessertAdapter adapter;
     private List<Dessert> dessertList;
-    private List<Dessert> selectedList; // Change the type to Dessert
+    private List<Dessert> selectedList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,11 +55,20 @@ public class DessertsCategory extends AppCompatActivity {
         submitBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Create an intent to start the CartActivity
-                Intent intent = new Intent(DessertsCategory.this, Cart.class);
-                // Put the selectedList as an extra
+                // Pass the selected dessert list to MilkRecipesActivity
+                Intent intent = new Intent(DessertsCategory.this, MilkRecipesActivity.class);
                 intent.putExtra("selectedList", (Serializable) selectedList);
-                // Start the CartActivity
+                startActivity(intent);
+            }
+        });
+
+        // Find the back button
+        Button backButton = findViewById(R.id.backBtn);
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Navigate back to the menu page
+                Intent intent = new Intent(DessertsCategory.this, Menu.class);
                 startActivity(intent);
             }
         });
