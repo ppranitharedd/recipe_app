@@ -17,7 +17,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BreakfastsCategory extends AppCompatActivity {
-
+//BreakfastCategory
     private RecyclerView recyclerView;
     private BreakfastAdapter adapter,adapter2;
     private List<Breakfasts> breakfastList;
